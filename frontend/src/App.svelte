@@ -1,12 +1,19 @@
 <script lang="ts">
   import CountdownTimer from './components/CountdownTimer.svelte';
-
+  import PaydayCountdown from './components/stats/PaydayCountdown.svelte';
+  import WeekendCountdown from './components/stats/WeekendCountdown.svelte';
+  import TodayEarnings from './components/stats/TodayEarnings.svelte';
 </script>
 
 <main>
   <div class="card" style="--wails-draggable:drag">
     <div class="content">
       <CountdownTimer offWorkHour={19} offWorkMinute={0} title="下班还有" />
+      <div class="stats">
+        <PaydayCountdown payday={10} />
+        <WeekendCountdown />
+        <TodayEarnings monthlySalary={10000} />
+      </div>
     </div>
   </div>
 </main>
