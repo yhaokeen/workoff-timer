@@ -1,8 +1,8 @@
 <script lang="ts">
-  import CountdownTimer from './components/CountdownTimer.svelte';
-  import PaydayCountdown from './components/stats/PaydayCountdown.svelte';
-  import WeekendCountdown from './components/stats/WeekendCountdown.svelte';
-  import TodayEarnings from './components/stats/TodayEarnings.svelte';
+  import CountdownTimer from "./components/CountdownTimer.svelte";
+  import PaydayCountdown from "./components/stats/PaydayCountdown.svelte";
+  import WeekendCountdown from "./components/stats/WeekendCountdown.svelte";
+  import TodayEarnings from "./components/stats/TodayEarnings.svelte";
 </script>
 
 <main>
@@ -41,5 +41,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .stats {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
   }
 </style>
