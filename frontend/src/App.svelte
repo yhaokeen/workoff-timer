@@ -3,6 +3,7 @@
   import PaydayCountdown from "./components/stats/PaydayCountdown.svelte";
   import WeekendCountdown from "./components/stats/WeekendCountdown.svelte";
   import TodayEarnings from "./components/stats/TodayEarnings.svelte";
+  import HolidayCountdown from "./components/stats/HolidayCountdown.svelte";
 </script>
 
 <main>
@@ -12,6 +13,7 @@
       <div class="stats">
         <PaydayCountdown payday={10} />
         <WeekendCountdown />
+        <HolidayCountdown />
         <TodayEarnings monthlySalary={10000} />
       </div>
     </div>
@@ -28,7 +30,7 @@
   }
 
   .card {
-    width: 90%;
+    width: 100%;
     height: 100%;
     /* 通过这里控制透明度，0.85 = 85%不透明 */
     background: rgba(255, 255, 255, 0.6);
