@@ -3,7 +3,7 @@
   import PaydayCountdown from "./components/stats/PaydayCountdown.svelte";
   import WeekendCountdown from "./components/stats/WeekendCountdown.svelte";
   import TodayEarnings from "./components/stats/TodayEarnings.svelte";
-  import HolidayCountdown from "./components/stats/HolidayCountdown.svelte";
+  import FestivalCountdown from "./components/stats/FestivalCountdown.svelte";
 </script>
 
 <main>
@@ -13,7 +13,7 @@
       <div class="stats">
         <PaydayCountdown payday={10} />
         <WeekendCountdown />
-        <HolidayCountdown />
+        <FestivalCountdown />
         <TodayEarnings monthlySalary={10000} />
       </div>
     </div>

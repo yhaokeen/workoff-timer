@@ -1,5 +1,6 @@
 <script lang="ts">
     import {onMount, onDestroy} from 'svelte';
+    import StatItem from './StatItem.svelte';
 
     export let monthlySalary: number = 10000;
     export let workStartHour: number = 9;
@@ -27,7 +28,7 @@
 
     onMount(() => {
         calculate();
-        timer = window.setInterval(calculate, 1000);
+        timer = window.setInterval(calculate, 100);
     });
 
     onDestroy(() => {
@@ -37,14 +38,5 @@
     });
 </script>
 
-<div class="stat-item">
-    <div class="label">今天赚了</div>
-    <div class="value">{earnings}<span class="unit">¥</span></div>
-</div>
 
-<style>
-    .stat-item { text-align: center; padding: 0 10px; }
-    .label { font-size: 12px; color: #888; margin-bottom: 4px; }
-    .value { font-size: 18px; font-weight: bold; color: #333; }
-    .unit { font-size: 12px; font-weight: normal; color: #666; margin-left: 2px; }
-  </style>
+<StatItem label="今天赚了" value={earnings} unit="¥" />
